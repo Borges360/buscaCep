@@ -1,4 +1,4 @@
-package com.example.demo
+package br.com.cep
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication

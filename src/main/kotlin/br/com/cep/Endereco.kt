@@ -1,4 +1,4 @@
-package com.example.demo
+package br.com.cep
 
 import javax.persistence.*
 

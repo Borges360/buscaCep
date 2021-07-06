@@ -1,10 +1,8 @@
-package com.example.demo
+package br.com.cep
 
 
-import javax.persistence.Column
 import javax.persistence.Entity
 import javax.persistence.Id
-import javax.persistence.Table
 
 @Entity
 class Cidade {

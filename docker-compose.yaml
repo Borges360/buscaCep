@@ -1,0 +1,25 @@
+version: '3'
+
+networks:
+  mysql-compose-network:
+    driver: bridge
+  monitoring:
+    driver: bridge
+
+
+services:
+  mysqlsrv:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: "apibr@2021#"
+      MYSQL_DATABASE: "ApiBR"
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./mysql-data:/var/lib/mysql
+    expose:
+      - 3306
+    networks:
+      - mysql-compose-network
+      - monitoring
+    command: ['mysqld', '--character-set-server=utf8mb4', '--collation-server=utf8mb4_unicode_ci']
